@@ -1,0 +1,67 @@
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户登录</title>
+
+<style type="text/css">
+body {
+	background-attachment: fixed;
+	background-color:#E6F1E6;
+}
+a:link{text-decoration: none; color:#000000;}
+a:visited{ color:green;}
+a:hover{text-decoration: underline; color:#09f;}
+a:active{text-decoration: blink; color: yellow;}
+</style>
+<link href="login.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+	    <img src="images/logogreen.gif"
+			 alt="Pulpit rock"
+			 style="width:500px;height:140px;position:relative;margin-left:360px;margin-top:60px;"/>
+	
+        <div style="width:500px;margin:0 auto;margin-top: 80px;margin-left:525px;">
+         <label for="username"
+				style="font-size:16px" >用户名：</label>
+         <div style="height:35px;width:400px;position:relative;display:inline" >   <!--相关位置--> <!--此处为相关位置与绝对位置联合使用-->
+             <input id="username"
+					type="text"
+					style="height:25px;width:100px;padding-right:50px;">
+             <span style="position:absolute;right:18px;top:2px;background-image:url(user.ico);height:16px;width:16px;display:inline-block;"></span>  <!--绝对位置-->
+         </div>
+         <br/>
+         <br/>
+         <label for="password1"
+				style="font-size:16px" >&nbsp密&nbsp&nbsp&nbsp码：</label>
+         <div style="height:35px;width:400px;position:relative;display:inline" >   <!--相关位置--> <!--此处为相关位置与绝对位置联合使用-->
+             <input id="password1"
+					type="password"
+					style="height:25px;width:100px;padding-right:50px;">
+             <span style="position:absolute;right:16px;top:2px;background-image:url(p.ico);height:16px;width:16px;display:inline-block;"></span>  <!--绝对位置-->
+         </div>
+         <br/>
+         <br/>
+         <div style="width:426px;float: left;">
+           <input type="checkbox"
+				  name="checkbox"
+				  id="checkbox">
+           自动登录 &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<a href="find.html">忘记密码？</a>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+             <a href="registered.html">注册</a>
+         </div>
+         <br/>
+         <br/>
+         <div style="width:426px;float: right;">
+          <a href="game.html">
+           <input type="submit"
+				  value="登录"
+				  style="height:30px;width:130px;color:#fff;background-color:#172714;"/>
+			 </a>
+         </div>
+     </div>
+	
+</body>
+</html>

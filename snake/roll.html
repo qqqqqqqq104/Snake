@@ -1,0 +1,152 @@
+<!doctype html public "-//W3C//DTD XHTML 1.0 Transitional//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>test</title>
+<style>
+body {
+	font-size: 12px;
+	line-height: 24px;
+	text-algin: center;        /* 页面内容居中 */
+	background-color: #E6F1E6;
+}
+* {
+	margin: 0px;
+	padding: 0px;            /*  去掉所有标签的marign和padding的值  */
+}
+
+ul {
+	list-style: none;           /*  去掉ul标签默认的点样式  */
+}
+a img {
+	border: none;        /*  超链接下，图片的边框  */
+}
+a {
+	color: #333;
+	text-decoration: none;     /* 超链接样式 */
+}
+a:hover {
+	color: green;
+}
+#post {
+	width: 399px;
+	border: 2px solid #ababab;
+	-moz-border-radius: 15px;      /* Gecko browsers */
+	-webkit-border-radius: 15px;   /* Webkit browsers */
+	border-radius: 15px;
+	margin: 20px auto 0;
+	text-align: left;               /* 让新闻内容靠左 */
+}
+/*  头部样式 */	
+#postTitle {
+	height: 62px;
+	overflow: hidden;  /* 这个一定要加上，内容超出的部分要隐藏，免得撑高头部 */
+	font-size: 26px;
+	line-height: 62px;
+	padding-left: 30px;
+	background-image: -moz-linear-gradient(top, #528752, #528752); /* Firefox */
+	background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #528752), color-stop(1, #528752)); /* Saf4+, Chrome */
+filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#528752', endColorstr='#528752', GradientType='0'); /* IE*/
+	border: 1px solid ##528752;
+	-moz-border-radius: 8px 8px 0 0;      /* Gecko browsers */
+	-webkit-border-radius: 8px 8px 0 0;   /* Webkit browsers */
+	border-radius: 8px 8px 0 0;
+	color: #fff;
+	position: relative;
+}
+#postTitle a {
+	position: absolute;
+	right: 10px;
+	bottom: 10px;
+	display: inline;
+	color: #fff;
+	font-size: 12px;
+	line-height: 24px;
+}
+/*  底部样式 */
+#postBot {
+	width: 399px;
+	height: 40px;
+	overflow: hidden;     /* 这个一定要加上，内容超出的部分要隐藏，免得撑高底部结构 */
+}
+/*  中间样式 */
+#postBox {
+	height: 144px;
+	width: 335px;
+	margin-left: 25px;
+	margin-top: 40px;
+	overflow: hidden;    /*  这个一定要加，超出的内容部分要隐藏，免得撑高中间部分 */
+}
+#post ul li {
+	height: 24px;
+}
+#post ul li a {
+	width: 180px;
+	float: left;
+	display: block;
+	overflow: hidden;
+	text-indent: 15px;
+	height: 24px;
+}
+#post ul li span {
+	float: right;
+	color: #172714;
+}
+
+</style>
+</head>
+
+<body>
+<!--  慕课网课程公告开始 -->
+<div  id="post"> 
+<!--  头部 -->
+<div  id="postTitle">最新发布的帖子<a href="#" target="_self">更多>></a> </div>
+<!--  头部结束 --> 
+<!--  中间 -->
+<div  id="postBox">
+    <ul>
+        <li><a href="#">1.************************</a><span>2019-05-23</span></li>
+        <li><a href="#">2.************************</a><span>2019-05-22</span></li>
+        <li><a href="#">3.************************</a><span>2019-05-19</span></li>
+        <li><a href="#">4.************************</a><span>2019-05-19</span></li>
+        <li><a href="#">5.************************</a><span>2019-05-18</span></li>
+        <li><a href="#">6.************************</a><span>2019-05-17</span></li>
+        <li><a href="#">7.************************</a><span>2019-05-16</span></li>
+        <li><a href="#">8.************************</a><span>2019-05-16</span></li>
+
+    </ul>
+</div>
+<!--  中间结束 --> 
+<!--  底部 -->
+<div  id ="postBot"> </div>
+<!--  底部结束 --> 
+</div>
+<!--  慕课网课程公告结束 --> 
+
+<script type="text/javascript">
+ var area = document.getElementById('postBox');
+ var iliHeight = 24;//单行滚动的高度
+ var speed = 50;//滚动的速度
+ var time;
+ var delay= 2000;
+ area.scrollTop=0;
+ area.innerHTML+=area.innerHTML;//克隆一份一样的内容
+ function startScroll(){
+	 time=setInterval("scrollUp()",speed);
+	 area.scrollTop++;
+	 }
+ function scrollUp(){
+	 if(area.scrollTop % iliHeight==0){
+		 clearInterval(time);
+		 setTimeout(startScroll,delay);
+		 }else{
+			 area.scrollTop++;
+			 if(area.scrollTop >= area.scrollHeight/2){
+				 area.scrollTop =0;
+				 }
+			 }
+	 }
+	 setTimeout(startScroll,delay)
+ </script>
+</body>
+</html>
